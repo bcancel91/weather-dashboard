@@ -1,17 +1,31 @@
 .container{
 
     border-style: solid;
-    height: 400px;
+    height: 275px;
     border-color: lightgray;
     border-width: 1px;
     border-radius: 5px;
 }
-#wind {
+#uvIndex {
     background-color: red;
-    padding-left: 4px;
-    padding-right: 4px;
+    color: white;
+    padding: 5px;
+    
+    border-radius: 4px;
 }
 #greyBox {
     padding-left: 30px;
     padding-top: 10px ;
+}
+.info {
+    color: gray;
+   
+}
+.cards{
+    background-color: rgb(45, 106, 240);
+    height: 210px;
+    width: 150px;
+    margin: 16px;
+   float: left;
+    
 }
