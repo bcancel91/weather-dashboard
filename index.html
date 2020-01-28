@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
-    
+        <nav class="navbar navbar-light bg-secondary d-flex justify-content-center">
+                <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+              </nav>
+              <div class="row">
+                 
+              <div id="greyBox" class="col-lg-4 bg-light">
+                  
+                  <h5 class="">Search for a City:</h5>
+
+                    <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                          </form>
+                        </div>
+                    
+              
+              
+
+              <div id="widebox" class="col-lg-8 bg-white">
+
+                <div class="container m-3 p-3">
+                 <h2>   <span id="city">Atlanta</span> </h2>
+                <p>Tempueture: <span id="temp">12</span></p>  
+                <p>Humidity: <span id="humidity">41%</span></p> 
+                <p>Wind Speed: <span id="wind">4.1 MPH</span></p> 
+                </div>
+              </div>
+
+            </div>
 </body>
 </html>

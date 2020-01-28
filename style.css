@@ -1,0 +1,17 @@
+.container{
+
+    border-style: solid;
+    height: 400px;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 5px;
+}
+#wind {
+    background-color: red;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#greyBox {
+    padding-left: 30px;
+    padding-top: 10px ;
+}
