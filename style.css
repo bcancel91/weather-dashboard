@@ -27,5 +27,18 @@
     width: 150px;
     margin: 16px;
    float: left;
+   border-radius: 5px;
+   color: whitesmoke;
+   padding: 5px;
     
+}
+#cityBox {
+    background-color: white;
+    height: 60px;
+    width: 320px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: lightgrey;
+    font-weight: 250;
 }
