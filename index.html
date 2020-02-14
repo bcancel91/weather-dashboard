@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/85b973685b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,31 +17,33 @@
         <nav class="navbar navbar-light bg-secondary d-flex justify-content-center">
               <span class="navbar-brand mb-0"><h1>Weather Dashboard</h1></span>
               </nav>
-              <div class="row">
+             
+              <div class="row container">
                  
-              <div id="greyBox" class="col-lg-4 bg-light">
+              <div id="greyBox" class="col-lg-4 bg-light greyContainer">
                   
                   <h5 class="">Search for a City:</h5>
 
 
                     <form class="form-inline mb-3">
                             <input class="form-control mr-sm-2" id="cityInput" type="text" placeholder="" aria-label="Search">
-                             <button class="btn btn-outline-success my-2 my-sm-0" id="citySearch" type="button"></button>
+                                 <button class="btn btn-outline-success my-2 my-sm-0"  id="citySearch" type="button"> <i class="fas fa-search"></i> </button>       
                            
                           </form>
   
+        <div class="contentContainer mb-3">
 
 
+                      <div id="cityBox" class="d-flex align-items-center justify-content-center cityBlock1"></div> 
 
-                          <div id="cityBox"class="d-flex align-items-center justify-content-center">Puerto Rico</div>
-                        </div>
-                 
-              
+                         </div>  
+                
+              </div>
               
 
               <div id="widebox" class="col-lg-8 bg-white">
 
-                <div class="container m-3 p-3">
+                <div class="currentWeather m-3 p-3">
                  <h2>   <span id="city">Atlanta</span> </h2>
                 <p class="info mt-4">Temperature: <span id="temp">12</span></p>  
                 <p class="info">Humidity: <span id="humidity">41%</span></p> 
@@ -50,29 +53,29 @@
                 <h3 class="ml-3">5-Day Forecast: </h3>
 
                 <div class="cards"id="card1">
-                    <span id="cardDate">Todays Date: </span>
-                  <p>Temp: <span id="cardTemp"></span></p>
-                  <p>Humidity: <span id="cardHumidity"></span></p>
+                    <span id="cardDate1">Todays Date: </span>
+                    <p class="cardStyle">Temp: <span id="cardTemp1"></span></p>
+                    <p class="cardStyle">Humidity: <span id="cardHumidity1"></span></p>
                 </div>
                 <div class="cards"id="card2">
-                        <span id="cardDate">Todays Date: </span>
-                        <p>Temp: <span id="cardTemp"></span></p>
-                        <p>Humidity: <span id="cardHumidity"></span></p>
+                        <span id="cardDate2">Todays Date: </span>
+                        <p class="cardStyle">Temp: <span id="cardTemp2"></span></p>
+                        <p class="cardStyle">Humidity: <span id="cardHumidity2"></span></p>
                 </div>
                 <div class="cards"id="card3">
-                        <span id="cardDate">Todays Date: </span>
-                        <p>Temp: <span id="cardTemp"></span></p>
-                        <p>Humidity: <span id="cardHumidity"></span></p>
+                        <span id="cardDate3">Todays Date: </span>
+                        <p class="cardStyle">Temp: <span id="cardTemp3"></span></p>
+                        <p class="cardStyle">Humidity: <span id="cardHumidity3"></span></p>
                 </div>
                 <div class="cards"id="card4">
-                        <span id="cardDate">Todays Date: </span>
-                        <p>Temp: <span id="cardTemp"></span></p>
-                        <p>Humidity: <span id="cardHumidity"></span></p>
+                        <span id="cardDate4">Todays Date: </span>
+                        <p class="cardStyle">Temp: <span id="cardTemp4"></span></p>
+                        <p class="cardStyle">Humidity: <span id="cardHumidity4"></span></p>
                 </div>
                 <div class="cards"id="card5">
-                        <span id="cardDate">Todays Date: </span>
-                        <p>Temp: <span id="cardTemp"></span></p>
-                        <p>Humidity: <span id="cardHumidity"></span></p>
+                        <span id="cardDate5">Todays Date: </span>
+                        <p class="cardStyle">Temp: <span id="cardTemp5"></span></p>
+                        <p class="cardStyle">Humidity: <span id="cardHumidity5"></span></p>
                 </div>
               </div>
               
@@ -82,6 +85,7 @@
 
 
             </div>
+        
             <script src="index.js"></script>
 </body>
 </html>
