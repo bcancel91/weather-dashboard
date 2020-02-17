@@ -16,15 +16,26 @@ $(document).ready(function () {
 
   }
 
- newFunction = ()=>{
+  $(".cityBlock").click( function(){
+  var cityName = $(this).text()
+  newFunction (cityName,false)
+  })
+
+  $("#citySearch").on("click", function(){
+    var city = $("#cityInput").val();
+
+newFunction(city, true)
+  })
+
+ newFunction = (city, search)=>{
 
     var cities = JSON.parse(localStorage.getItem('city'));
 
-    var city = $("#cityInput").val();
+   
     var cityCaps = city.toUpperCase();
     var key = "debb58b88aa0bc449e88ba80f54e04e0";
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + key;
-
+if(search){
     cities.unshift(cityCaps);
 
   if(cities.length > 10){
@@ -40,12 +51,16 @@ $(document).ready(function () {
     $(".contentContainer").empty();
 
     for (var i = 0; i < data.length; i++) {
-      // var cityVal = localStorage.getItem("city")
+      
       $(".contentContainer").append("<div class='d-flex align-items-center justify-content-center cityBlock'>" + data[i] + "</div>")
 
 
     }
-
+    $(".cityBlock").click( function(){
+      var cityName = $(this).text()
+      newFunction (cityName,false)
+      })
+  }
 
     $.ajax({
       url: queryURL,
@@ -76,7 +91,7 @@ $(document).ready(function () {
         method: "GET"
       }).then(function (response) {
         $("#uvIndex").text(response[0].value)
-        // console.log(response)
+        
 
         url5Day = "http://api.openweathermap.org/data/2.5/forecast?appid=" + key + "&lat=" + uvLAT + "&lon=" + uvLON + "&units=imperial";
 
@@ -84,9 +99,7 @@ $(document).ready(function () {
           url: url5Day,
           method: "GET"
         }).then(function (response) {
-          console.log(response)
-
-
+          
           $("#cardDate1").text(moment().format('l'));
           $("#cardDate1").append("<br><img src=http://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png>");
           $("#cardTemp1").text(response.list[0].main.temp + " ºF");
@@ -112,7 +125,6 @@ $(document).ready(function () {
           $("#cardTemp5").text(response.list[30].main.temp + " ºF");
           $("#cardHumidity5").text(response.list[30].main.humidity);
 
-
         })
 
       })
@@ -120,6 +132,6 @@ $(document).ready(function () {
     })
 
   }
-  $("#citySearch").on("click", newFunction)
+  
   
 })
