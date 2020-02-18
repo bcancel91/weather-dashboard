@@ -104,27 +104,27 @@ if(search){
         }).then(function (response) {
           
           $("#cardDate1").text(moment().format('l'));
-          $("#cardDate1").append("<br><img src=http://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png>");
+          $("#cardDate1").append("<br><img src=https://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png>");
           $("#cardTemp1").text(response.list[0].main.temp + " ºF");
           $("#cardHumidity1").text(response.list[0].main.humidity + " %");
 
           $("#cardDate2").text(moment().add(1, 'days').format('l'));
-          $("#cardDate2").append("<br><img src=http://openweathermap.org/img/w/" + response.list[6].weather[0].icon + ".png>");
+          $("#cardDate2").append("<br><img src=https://openweathermap.org/img/w/" + response.list[6].weather[0].icon + ".png>");
           $("#cardTemp2").text(response.list[6].main.temp + " ºF");
           $("#cardHumidity2").text(response.list[6].main.humidity);
 
           $("#cardDate3").text(moment().add(2, 'days').format('l'));
-          $("#cardDate3").append("<br><img src=http://openweathermap.org/img/w/" + response.list[14].weather[0].icon + ".png>");
+          $("#cardDate3").append("<br><img src=https://openweathermap.org/img/w/" + response.list[14].weather[0].icon + ".png>");
           $("#cardTemp3").text(response.list[14].main.temp + " ºF");
           $("#cardHumidity3").text(response.list[14].main.humidity);
 
           $("#cardDate4").text(moment().add(3, 'days').format('l'));
-          $("#cardDate4").append("<br><img src=http://openweathermap.org/img/w/" + response.list[22].weather[0].icon + ".png>")
+          $("#cardDate4").append("<br><img src=https://openweathermap.org/img/w/" + response.list[22].weather[0].icon + ".png>")
           $("#cardTemp4").text(response.list[22].main.temp + " ºF");
           $("#cardHumidity4").text(response.list[22].main.humidity);
 
           $("#cardDate5").text(moment().add(4, 'days').format('l'));
-          $("#cardDate5").append("<br><img src=http://openweathermap.org/img/w/" + response.list[30].weather[0].icon + ".png>")
+          $("#cardDate5").append("<br><img src=httpsgit add://openweathermap.org/img/w/" + response.list[30].weather[0].icon + ".png>")
           $("#cardTemp5").text(response.list[30].main.temp + " ºF");
           $("#cardHumidity5").text(response.list[30].main.humidity);
 
