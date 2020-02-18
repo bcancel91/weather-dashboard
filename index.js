@@ -96,7 +96,7 @@ if(search){
         $("#uvIndex").text(response[0].value)
         
 
-        url5Day = "http://api.openweathermap.org/data/2.5/forecast?appid=" + key + "&lat=" + uvLAT + "&lon=" + uvLON + "&units=imperial";
+        url5Day = "https://api.openweathermap.org/data/2.5/forecast?appid=" + key + "&lat=" + uvLAT + "&lon=" + uvLON + "&units=imperial";
 
         $.ajax({
           url: url5Day,
