@@ -23,3 +23,5 @@ Once user inputs a city and clicks the search button. The app will form a API re
   After the city is input the app will store that value to the top of the list that is stored until the list reached a max of 10 cities.
   
  This App was made possible with  2 diffrent request to a single API. It runs on JavaScript, styled with CSS and Bootstrap.
+ 
+  https://bcancel91.github.io/weather-dashboard/
