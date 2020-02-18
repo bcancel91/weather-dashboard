@@ -78,7 +78,7 @@ if(search){
 
 
       var iconCode = response.weather[0].icon;
-      var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+      var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
       $("#city").append("<img src=" + iconUrl + ">");
 
 
@@ -87,7 +87,7 @@ if(search){
       var key = "debb58b88aa0bc449e88ba80f54e04e0";
 
 
-      var uvURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?appid=" + key + "&lat=" + uvLAT + "&lon=" + uvLON;
+      var uvURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=" + key + "&lat=" + uvLAT + "&lon=" + uvLON;
 
       $.ajax({
         url: uvURL,
