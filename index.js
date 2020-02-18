@@ -30,6 +30,9 @@ newFunction(city, true)
  newFunction = (city, search)=>{
 
     var cities = JSON.parse(localStorage.getItem('city'));
+    if(cities === null){
+      cities = []
+    }
 
    
     var cityCaps = city.toUpperCase();
