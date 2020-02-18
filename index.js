@@ -124,7 +124,7 @@ if(search){
           $("#cardHumidity4").text(response.list[22].main.humidity);
 
           $("#cardDate5").text(moment().add(4, 'days').format('l'));
-          $("#cardDate5").append("<br><img src=httpsgit add://openweathermap.org/img/w/" + response.list[30].weather[0].icon + ".png>")
+          $("#cardDate5").append("<br><img src=https//openweathermap.org/img/w/" + response.list[30].weather[0].icon + ".png>")
           $("#cardTemp5").text(response.list[30].main.temp + " ºF");
           $("#cardHumidity5").text(response.list[30].main.humidity);
 
